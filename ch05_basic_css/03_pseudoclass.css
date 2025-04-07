@@ -48,3 +48,45 @@ ol li:last-child {
 .outer > li:not(:last-child) {
   text-decoration: line-through;
 }
+
+ul:not(.outer) li {
+  font-weight: 999;
+}
+
+/*nth-child
+~ 번째 요소 가상 클래스
+*/
+ol li:nth-child(3) {
+  font-weight: bold;
+  color: deeppink;
+}
+
+/* n번째 마다 */
+/* ol li:nth-child(2n) {
+  text-decoration: underline;
+  color: white;
+} */
+
+/* n번째마다 + k 
+n = 0부터 시작함
+*/
+/* ol li:nth-child(3n+1) {
+  font-weight: 100; 
+  color: darkmagenta;
+} */
+/*
+odd : 홀수에만
+even : 짝수에만
+*/
+/* ol li:nth-child(odd) {
+  text-decoration: overline; 
+  color: blue;
+} */
+
+/*마우스 오버 가상 클래스*/
+li:hover {
+  font-weight: bold;
+  color:blue;
+}
+/*이상의 경우 파란색으로 바뀌는 애도 있고 아닌 애도 있는데 이건 우선 순위를 li만으로 잡아놨기 때문에 조건이 더 구체적인 애들과 충돌할 경우 무시되기 때문입니다.*/
+
